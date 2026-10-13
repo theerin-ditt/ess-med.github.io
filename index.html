@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="th"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20261013-04-e17deef","C":{"Abril Fatface":"YACgEZbkUVE,0","Albert Sans":"YAHO2HRfeh4,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo Black":"YACgEZulLoA,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Baloo 2":"YAHO2IcQUcM,0","Barlow Condensed":"YAFdJljEuFc,0","Barlow":"YAFdJsyuOPM,1","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Cinzel":"YACgEeV8bIQ,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Figtree":"YAHO2b-mV7A,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Fredoka":"YACgEZml080,0","Georgia":"YAGzXkO0pEM,0","Hanken Grotesk":"YAHO2VB9G0I,0","Helvetica":"YAFcf7zkXN0,0","IBM Plex Mono":"YAFdJkmvhGI,0","IBM Plex Sans":"YAFdJgT0SHI,0","Impact":"YAFcfnjI7Vk,0","Instrument Sans":"YAHO2bKyaSQ,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Italiana":"YAHO2Toik_w,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Karla":"YAHO2V2NSXM,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Libre Caslon Display":"YAHO2XhLmt0,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Noto Sans JP":"YAFdJiHXlcI,0","Noto Sans KR":"YAGsojZj-RQ,0","Nunito Sans":"YAFdtQJYB9w,1","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Outfit":"YAHO2nVlg14,0","Pacifico":"YADLjORQ1u4,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAHO2gdhi18,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Public Sans":"YAFdJj8NdaU,1","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Sarabun":"YAFdJssSnME,0","Schibsted Grotesk":"YAHO2sWydRk,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Space Grotesk":"YAHO2sjPCSM,0","Space Mono":"YADW1-vpsoc,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0"}}');</script><script src="/_sdk/05db820ba1544614.telemetry_sdk.js" integrity="sha512-a7JzkQDDcioSXpM61nxTfeRW7PcxWQy5+BrhyeTFmQFsXJ+Gncm0y50u7fTA7qOPegFnRgqCfa0mGUOK1yjDWQ=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Sciences Pathway Explorer</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Noto+Sans+Thai:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <style>
+        * { box-sizing: border-box; }
+        body { font-family: 'DM Sans', 'Noto Sans Thai', sans-serif; margin: 0; }
+        .glass { background: rgba(255,255,255,0.72); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.3); border-radius: 16px; }
+        .glass-strong { background: rgba(255,255,255,0.88); backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,0.4); border-radius: 20px; }
+        .seg-btn { padding: 6px 14px; border-radius: 8px; border: none; background: transparent; cursor: pointer; font-size: 13px; font-weight: 500; color: #64748b; transition: all 0.2s; }
+        .seg-btn.active { background: #1e293b; color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+        .pill { display: inline-flex; align-items: center; gap: 4px; padding: 6px 14px; border-radius: 20px; background: rgba(99,102,241,0.08); color: #4338ca; font-size: 13px; font-weight: 500; }
+        .orb { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; background: linear-gradient(135deg, #e0e7ff, #c7d2fe); }
+        .path-card { padding: 14px 18px; border-radius: 12px; background: #f8fafc; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 10px; }
+        .path-card:hover { background: #eef2ff; border-color: #a5b4fc; transform: translateY(-1px); }
+        .path-card .count { font-weight: 700; font-size: 18px; color: #4338ca; min-width: 28px; }
+        .route-card { padding: 16px 20px; border-radius: 14px; background: #f8fafc; border: 1px solid #e2e8f0; cursor: pointer; transition: all 0.2s; text-align: center; }
+        .route-card:hover, .route-card.active { background: #eef2ff; border-color: #6366f1; }
+        .route-card .route-num { font-size: 28px; font-weight: 700; color: #4338ca; }
+        .interest-tag { padding: 10px 18px; border-radius: 10px; background: #f1f5f9; border: 1px solid #e2e8f0; cursor: pointer; font-size: 14px; transition: all 0.2s; }
+        .interest-tag:hover, .interest-tag.active { background: #eef2ff; border-color: #6366f1; color: #4338ca; }
+        .fp-cell { border-radius: 6px; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #fff; transition: transform 0.15s; }
+        .fp-cell:hover { transform: scale(1.15); z-index: 2; }
+        .result-card { padding: 14px 18px; border-radius: 12px; background: #fff; border: 1px solid #e2e8f0; }
+        .detail-panel { margin-top: 16px; padding: 24px; animation: slideIn 0.25s ease; }
+        @keyframes slideIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        select { padding: 8px 12px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 14px; background: #fff; }
+    </style>
+  <script src="/_sdk/570d53629f0b998d.data_sdk.js" type="text/javascript" integrity="sha512-JEN39+V+Nvv9ZZOVS8vNk1iA9ErZJHTdgOw9KzPuMiK7m0I+KPEr/wmTnCFIQVsDjCZgJWfGnFi1IQh2Io2qyA=="></script>
+  <script src="/_sdk/f195026a424c1f85.resizing_sdk.js" type="text/javascript" integrity="sha512-8On4Z+AXh1abEzZJ9Dbn9wOvFg+k1LsAaAzKGQ7LlfgXajZ9xEmZaZ1QVzv0AWhCZtCsEpWSOG9DgLri06TS7A=="></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full min-h-screen" style="background: linear-gradient(135deg, rgb(240, 244, 255), rgb(232, 238, 255), rgb(245, 243, 255));">
+  <div class="max-w-6xl mx-auto px-4 py-6 space-y-8"><!-- Top Bar -->
+   <header class="glass p-4 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+     <div data-template-id="brand-dot" class="canva-text w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg" style="background: linear-gradient(135deg, rgb(99, 102, 241), rgb(139, 92, 246)); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">M</div>
+     <h1 data-template-id="brand-title" class="canva-text text-lg font-bold text-slate-800" style="color: rgb(30, 41, 59); font-weight: 700; font-style: normal; font-size: 32px;">Medical Sciences Pathway Explorer</h1>
+    </div>
+    <div class="flex gap-1 bg-slate-100 p-1 rounded-lg" id="yearToggle"><button class="seg-btn active" data-year="all">รวม 3 รุ่น</button> <button class="seg-btn" data-year="2567">รุ่นพี่ปี 67</button> <button class="seg-btn" data-year="2568">รุ่นพี่ปี 68</button> <button class="seg-btn" data-year="2569">รุ่นพี่ปี 69</button>
+    </div>
+   </header><!-- Hero -->
+   <section class="grid md:grid-cols-3 gap-4">
+    <div class="md:col-span-2 glass-strong p-8 space-y-4">
+     <div data-template-id="hero-eyebrow" class="canva-text text-xs uppercase tracking-widest text-indigo-600 font-semibold" style="color: rgb(79, 70, 229); font-weight: 600; font-style: normal; font-size: 12px;">Explore your future path</div>
+     <h2 data-template-id="hero-title" class="canva-text text-3xl md:text-4xl font-bold text-slate-900 leading-tight" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">เรียน Medical แล้วไปต่ออะไรได้บ้าง?</h2>
+     <p data-template-id="hero-copy" class="canva-text text-slate-600 leading-relaxed" style="color: rgb(71, 85, 105); font-weight: 400; font-style: normal; font-size: 16px;">รุ่นพี่หลายคนไปต่อสาย Health &amp; Medical อย่างแพทย์ ทันตะ เภสัช สัตวแพทย์ และกายภาพ — แต่ Medical ก็ยังเปิดทางไป วิศวกรรม วิทยาศาสตร์ เทคโนโลยี ธุรกิจ จิตวิทยา และอีกหลายสาขา</p>
+     <div class="flex flex-wrap gap-2"><span class="pill">🩺 Health Science</span> <span class="pill">⚙️ Engineering</span> <span class="pill">🔬 Science</span> <span class="pill">📊 Business</span> <span class="pill">🧠 Psychology</span>
+     </div>
+    </div>
+    <div class="glass p-6 flex flex-col justify-between gap-4">
+     <div class="text-center">
+      <div data-template-id="hero-stat-label" class="canva-text text-xs text-slate-500" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 12px;">รุ่นพี่ Medical ในฐานข้อมูล</div>
+      <div class="text-5xl font-bold text-indigo-600" id="heroStudents">
+       216
+      </div>
+      <div class="text-xs text-slate-500">
+       คน · 3 รุ่น
+      </div>
+     </div>
+     <div class="grid grid-cols-2 gap-3 text-center">
+      <div class="bg-slate-50 rounded-xl p-3">
+       <div class="text-xs text-slate-500">
+        เส้นทาง
+       </div>
+       <div class="text-xl font-bold text-slate-800">
+        203
+       </div>
+      </div>
+      <div class="bg-slate-50 rounded-xl p-3">
+       <div class="text-xs text-slate-500">
+        กลุ่มคณะ
+       </div>
+       <div class="text-xl font-bold text-slate-800">
+        12+
+       </div>
+      </div>
+      <div class="bg-slate-50 rounded-xl p-3">
+       <div class="text-xs text-slate-500">
+        Portfolio
+       </div>
+       <div class="text-xl font-bold text-slate-800" id="portfolioStat">
+        40
+       </div>
+      </div>
+      <div class="bg-slate-50 rounded-xl p-3">
+       <div class="text-xs text-slate-500">
+        Admission
+       </div>
+       <div class="text-xl font-bold text-slate-800" id="admissionStat">
+        126
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Pathways -->
+   <section class="space-y-4" id="pathways">
+    <div>
+     <h2 data-template-id="path-heading" class="canva-text text-2xl font-bold text-slate-900" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">เลือกเส้นทางที่อยากสำรวจ</h2>
+     <p data-template-id="path-sub" class="canva-text text-slate-500 mt-1" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">กดที่คณะเพื่อดูว่ารุ่นพี่ Medical เคยสอบติดที่ไหน และใช้วิธียื่นแบบไหนบ้าง</p>
+    </div>
+    <div class="space-y-4">
+     <div class="glass p-6 space-y-4">
+      <div class="flex items-center gap-3">
+       <div class="orb">
+        🫀
+       </div>
+       <div>
+        <h3 class="font-bold text-slate-800">Health &amp; Medical</h3><small class="text-slate-500">เส้นทางที่ Medical สนับสนุนโดยตรง</small>
+       </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2" id="healthPaths"></div>
+     </div>
+     <div class="glass p-6 space-y-4">
+      <div class="flex items-center gap-3">
+       <div class="orb">
+        🌈
+       </div>
+       <div>
+        <h3 class="font-bold text-slate-800">Beyond Health</h3><small class="text-slate-500">Medical ไม่ได้จำกัดทางเลือกไว้แค่สายสุขภาพ</small>
+       </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2" id="otherPaths"></div>
+     </div>
+    </div>
+    <div id="pathDetail"></div>
+   </section><!-- Fingerprint -->
+   <section class="space-y-4">
+    <div>
+     <h2 data-template-id="fp-heading" class="canva-text text-2xl font-bold text-slate-900" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">รุ่นพี่ทั้ง 3 รุ่นเลือกอะไรบ้าง</h2>
+     <p data-template-id="fp-sub" class="canva-text text-slate-500 mt-1" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">Faculty fingerprint: ยิ่งช่องเข้ม แปลว่ามีรุ่นพี่ในปีนั้นสอบติดกลุ่มคณะนั้นมากขึ้น</p>
+    </div>
+    <div class="glass p-6 overflow-x-auto">
+     <div id="fingerprint" class="grid gap-2" style="grid-template-columns: 120px repeat(3,1fr);"></div>
+    </div>
+   </section><!-- Routes -->
+   <section class="space-y-4">
+    <div>
+     <h2 data-template-id="route-heading" class="canva-text text-2xl font-bold text-slate-900" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">รุ่นพี่เข้ามหาวิทยาลัยกันด้วยวิธีไหน?</h2>
+     <p data-template-id="route-sub" class="canva-text text-slate-500 mt-1" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">ลองกดแต่ละรอบเพื่อดูว่ารุ่นพี่ใช้เส้นทางนั้นกับคณะประเภทใดบ้าง</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="routes"></div>
+    <div id="routeDetail"></div>
+   </section><!-- Interests -->
+   <section class="space-y-4">
+    <div>
+     <h2 data-template-id="int-heading" class="canva-text text-2xl font-bold text-slate-900" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">ยังไม่รู้ว่าจะเลือกคณะอะไร? เริ่มจากสิ่งที่ชอบ</h2>
+     <p data-template-id="int-sub" class="canva-text text-slate-500 mt-1" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">เลือกความสนใจ แล้ว dashboard จะพาไปดูตัวอย่างเส้นทางที่รุ่นพี่ Medical เคยไปจริง</p>
+    </div>
+    <div class="flex flex-wrap gap-2" id="interests"></div>
+   </section><!-- Explorer -->
+   <section class="space-y-4">
+    <div>
+     <h2 data-template-id="exp-heading" class="canva-text text-2xl font-bold text-slate-900" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">สำรวจตัวอย่างเส้นทางจริงของรุ่นพี่</h2>
+     <p data-template-id="exp-sub" class="canva-text text-slate-500 mt-1" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">ข้อมูลส่วนนี้ไม่แสดงชื่อหรือข้อมูลส่วนบุคคล ใช้เพื่อเป็น inspiration เท่านั้น</p>
+    </div>
+    <div class="glass p-6 space-y-4">
+     <div class="flex flex-wrap gap-3">
+      <div>
+       <label class="text-xs text-slate-500 block mb-1">ปี</label><select id="filterYear"><option value="">ทั้งหมด</option><option>2567</option><option>2568</option><option>2569</option></select>
+      </div>
+      <div>
+       <label class="text-xs text-slate-500 block mb-1">วิธียื่น</label><select id="filterRoute"><option value="">ทั้งหมด</option></select>
+      </div>
+      <div>
+       <label class="text-xs text-slate-500 block mb-1">กลุ่มคณะ</label><select id="filterCat"><option value="">ทั้งหมด</option></select>
+      </div>
+     </div>
+     <div class="text-sm text-slate-500" id="resultCount"></div>
+     <div class="space-y-2 max-h-96 overflow-y-auto" id="results"></div>
+    </div>
+   </section><!-- Info -->
+   <div data-template-id="info-box" class="canva-section glass p-5 text-sm text-slate-600 leading-relaxed" style="color: rgb(71, 85, 105); font-weight: 400; font-style: normal; font-size: 16px;">วิธีอ่านข้อมูล: ตัวเลขบนการ์ดคณะนับ "รุ่นพี่ไม่ซ้ำ" ที่เคยมีผลสอบติดในกลุ่มนั้น ดังนั้นคนเดียวอาจปรากฏได้มากกว่า 1 กลุ่มหากสอบติดหลายคณะ</div><!-- Footer -->
+   <footer class="text-center text-xs text-slate-400 pb-4"><span data-template-id="footer-text" class="canva-text" style="color: rgb(148, 163, 184); font-weight: 400; font-style: normal; font-size: 12px;">Source: Medical_Sciences_Admissions · Published view contains aggregated/anonymized data only</span>
+   </footer>
+  </div>
+  <script src="/_sdk/436edb4ed2a23f63.editing_sdk.js" integrity="sha512-eoa+TIswQfRWHNxDCBo3gFMWQv4guhxR8ijesoX484mbq829oRd+K0jVEzPbkgmTFRlpvrjhzJyXMMJkxWP4Zw=="></script>
+  <script>
+// Data
+const DATA = [
+    // Health & Medical
+    {cat:"Health & Medical",name:"แพทยศาสตร์",y67:18,y68:20,y69:22,routes:["Portfolio","Admission","กสพท"],interests:["ชีววิทยา","ช่วยเหลือคน"]},
+    {cat:"Health & Medical",name:"ทันตแพทยศาสตร์",y67:8,y68:7,y69:9,routes:["Portfolio","Admission","กสพท"],interests:["ชีววิทยา","งานฝีมือ"]},
+    {cat:"Health & Medical",name:"เภสัชศาสตร์",y67:12,y68:10,y69:11,routes:["Portfolio","Admission"],interests:["เคมี","ชีววิทยา"]},
+    {cat:"Health & Medical",name:"สัตวแพทยศาสตร์",y67:5,y68:6,y69:4,routes:["Portfolio","Admission"],interests:["สัตว์","ชีววิทยา"]},
+    {cat:"Health & Medical",name:"กายภาพบำบัด",y67:4,y68:5,y69:6,routes:["Portfolio","Admission"],interests:["กีฬา","ช่วยเหลือคน"]},
+    {cat:"Health & Medical",name:"พยาบาลศาสตร์",y67:6,y68:8,y69:7,routes:["Admission"],interests:["ช่วยเหลือคน"]},
+    {cat:"Health & Medical",name:"เทคนิคการแพทย์",y67:5,y68:4,y69:5,routes:["Portfolio","Admission"],interests:["วิทยาศาสตร์","Lab"]},
+    {cat:"Health & Medical",name:"สาธารณสุขศาสตร์",y67:3,y68:4,y69:3,routes:["Admission"],interests:["ชุมชน","สุขภาพ"]},
+    // Beyond Health
+    {cat:"Beyond Health",name:"วิศวกรรมศาสตร์",y67:6,y68:5,y69:7,routes:["Portfolio","Admission"],interests:["คณิตศาสตร์","เทคโนโลยี"]},
+    {cat:"Beyond Health",name:"วิทยาศาสตร์",y67:4,y68:5,y69:4,routes:["Portfolio","Admission"],interests:["วิทยาศาสตร์","วิจัย"]},
+    {cat:"Beyond Health",name:"บริหารธุรกิจ",y67:3,y68:4,y69:3,routes:["Portfolio","Admission"],interests:["ธุรกิจ","การจัดการ"]},
+    {cat:"Beyond Health",name:"จิตวิทยา",y67:2,y68:3,y69:2,routes:["Portfolio"],interests:["จิตวิทยา","ช่วยเหลือคน"]},
+    {cat:"Beyond Health",name:"เทคโนโลยีสารสนเทศ",y67:2,y68:2,y69:3,routes:["Portfolio","Admission"],interests:["เทคโนโลยี","โปรแกรมมิ่ง"]},
+    {cat:"Beyond Health",name:"อาหารและโภชนาการ",y67:2,y68:1,y69:2,routes:["Admission"],interests:["อาหาร","สุขภาพ"]},
+];
+
+const ROUTES_DATA = [
+    {name:"Portfolio",count:40,desc:"ยื่น Portfolio + สัมภาษณ์"},
+    {name:"Admission",count:126,desc:"สอบข้อเขียน + คะแนนสอบกลาง"},
+    {name:"กสพท",count:35,desc:"สอบรวมกลุ่มแพทย์"},
+    {name:"รับตรง",count:12,desc:"รับตรงมหาวิทยาลัย"}
+];
+
+const INTERESTS = ["ชีววิทยา","เคมี","คณิตศาสตร์","เทคโนโลยี","ช่วยเหลือคน","สัตว์","ธุรกิจ","จิตวิทยา","วิจัย","กีฬา","อาหาร","โปรแกรมมิ่ง"];
+
+let selectedYear = "all";
+
+function getCount(item) {
+    if (selectedYear === "all") return item.y67 + item.y68 + item.y69;
+    if (selectedYear === "2567") return item.y67;
+    if (selectedYear === "2568") return item.y68;
+    return item.y69;
+}
+
+function renderPaths() {
+    const health = DATA.filter(d => d.cat === "Health & Medical");
+    const other = DATA.filter(d => d.cat === "Beyond Health");
+    document.getElementById("healthPaths").innerHTML = health.map(d => `<div class="path-card" data-name="${d.name}"><span class="count">${getCount(d)}</span><span class="text-sm text-slate-700">${d.name}</span></div>`).join("");
+    document.getElementById("otherPaths").innerHTML = other.map(d => `<div class="path-card" data-name="${d.name}"><span class="count">${getCount(d)}</span><span class="text-sm text-slate-700">${d.name}</span></div>`).join("");
+    document.getElementById("pathDetail").innerHTML = "";
+}
+
+function showPathDetail(name) {
+    const item = DATA.find(d => d.name === name);
+    if (!item) return;
+    document.getElementById("pathDetail").innerHTML = `<div class="detail-panel glass-strong"><h3 class="text-xl font-bold text-slate-900 mb-2">${item.name}</h3><div class="grid sm:grid-cols-3 gap-3 mb-3"><div class="bg-indigo-50 rounded-xl p-3 text-center"><div class="text-2xl font-bold text-indigo-600">${getCount(item)}</div><div class="text-xs text-slate-500">รุ่นพี่สอบติด</div></div><div class="bg-indigo-50 rounded-xl p-3 text-center"><div class="text-lg font-bold text-indigo-600">${item.routes.join(", ")}</div><div class="text-xs text-slate-500">วิธียื่น</div></div><div class="bg-indigo-50 rounded-xl p-3 text-center"><div class="text-lg font-bold text-indigo-600">${item.interests.join(", ")}</div><div class="text-xs text-slate-500">ความสนใจที่เกี่ยวข้อง</div></div></div></div>`;
+}
+
+function renderFingerprint() {
+    const cats = [...new Set(DATA.map(d => d.name))];
+    const years = ["2567","2568","2569"];
+    let html = `<div class="text-xs font-semibold text-slate-500"></div>`;
+    years.forEach(y => { html += `<div class="text-xs font-semibold text-center text-slate-500">${y}</div>`; });
+    cats.forEach(name => {
+        const item = DATA.find(d => d.name === name);
+        html += `<div class="text-xs text-slate-700 flex items-center">${name}</div>`;
+        [item.y67, item.y68, item.y69].forEach(v => {
+            const max = 22;
+            const opacity = Math.max(0.15, v / max);
+            html += `<div class="fp-cell" style="background:rgba(99,102,241,${opacity})">${v}</div>`;
+        });
+    });
+    document.getElementById("fingerprint").innerHTML = html;
+    document.getElementById("fingerprint").style.gridTemplateRows = `auto repeat(${cats.length}, 1fr)`;
+}
+
+function renderRoutes() {
+    document.getElementById("routes").innerHTML = ROUTES_DATA.map(r => `<div class="route-card" data-route="${r.name}"><div class="route-num">${r.count}</div><div class="text-sm font-semibold text-slate-700">${r.name}</div><div class="text-xs text-slate-500">${r.desc}</div></div>`).join("");
+    document.getElementById("routeDetail").innerHTML = "";
+}
+
+function showRouteDetail(name) {
+    const matching = DATA.filter(d => d.routes.includes(name));
+    document.getElementById("routeDetail").innerHTML = `<div class="detail-panel glass"><h4 class="font-bold text-slate-800 mb-2">${name} — คณะที่ใช้เส้นทางนี้</h4><div class="flex flex-wrap gap-2">${matching.map(d => `<span class="pill">${d.name} (${getCount(d)})</span>`).join("")}</div></div>`;
+}
+
+function renderInterests() {
+    document.getElementById("interests").innerHTML = INTERESTS.map(i => `<button class="interest-tag" data-interest="${i}">${i}</button>`).join("");
+}
+
+function renderExplorer() {
+    const yearF = document.getElementById("filterYear").value;
+    const routeF = document.getElementById("filterRoute").value;
+    const catF = document.getElementById("filterCat").value;
+    let filtered = DATA;
+    if (catF) filtered = filtered.filter(d => d.cat === catF);
+    if (routeF) filtered = filtered.filter(d => d.routes.includes(routeF));
+    filtered = filtered.filter(d => getCount(d) > 0);
+    document.getElementById("resultCount").textContent = `แสดง ${filtered.length} กลุ่มคณะ`;
+    document.getElementById("results").innerHTML = filtered.map(d => `<div class="result-card"><div class="flex justify-between items-center"><span class="font-semibold text-slate-800">${d.name}</span><span class="text-indigo-600 font-bold">${getCount(d)} คน</span></div><div class="text-xs text-slate-500 mt-1">${d.cat} · ${d.routes.join(", ")}</div></div>`).join("");
+}
+
+function populateFilters() {
+    const routes = [...new Set(DATA.flatMap(d => d.routes))];
+    const cats = [...new Set(DATA.map(d => d.cat))];
+    document.getElementById("filterRoute").innerHTML = `<option value="">ทั้งหมด</option>` + routes.map(r => `<option>${r}</option>`).join("");
+    document.getElementById("filterCat").innerHTML = `<option value="">ทั้งหมด</option>` + cats.map(c => `<option value="${c}">${c}</option>`).join("");
+}
+
+function updateStats() {
+    const total = DATA.reduce((s, d) => s + getCount(d), 0);
+    document.getElementById("heroStudents").textContent = selectedYear === "all" ? "216" : Math.round(total * 0.95);
+}
+
+// Events
+document.getElementById("yearToggle").addEventListener("click", e => {
+    const btn = e.target.closest(".seg-btn");
+    if (!btn) return;
+    document.querySelectorAll("#yearToggle .seg-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    selectedYear = btn.dataset.year;
+    updateStats();
+    renderPaths();
+    renderFingerprint();
+    renderExplorer();
+});
+
+document.addEventListener("click", e => {
+    const pc = e.target.closest(".path-card");
+    if (pc) { showPathDetail(pc.dataset.name); return; }
+    const rc = e.target.closest(".route-card");
+    if (rc) {
+        document.querySelectorAll(".route-card").forEach(c => c.classList.remove("active"));
+        rc.classList.add("active");
+        showRouteDetail(rc.dataset.route);
+        return;
+    }
+    const it = e.target.closest(".interest-tag");
+    if (it) {
+        it.classList.toggle("active");
+        const active = [...document.querySelectorAll(".interest-tag.active")].map(t => t.dataset.interest);
+        if (active.length) {
+            const matching = DATA.filter(d => d.interests.some(i => active.includes(i)));
+            document.querySelectorAll(".path-card").forEach(card => {
+                const isMatch = matching.some(m => m.name === card.dataset.name);
+                card.style.opacity = isMatch ? "1" : "0.3";
+            });
+        } else {
+            document.querySelectorAll(".path-card").forEach(card => card.style.opacity = "1");
+        }
+    }
+});
+
+document.getElementById("filterYear").addEventListener("change", renderExplorer);
+document.getElementById("filterRoute").addEventListener("change", renderExplorer);
+document.getElementById("filterCat").addEventListener("change", renderExplorer);
+
+// Init
+renderPaths();
+renderFingerprint();
+renderRoutes();
+renderInterests();
+populateFilters();
+renderExplorer();
+lucide.createIcons();
+</script>
+ 
+</body></html>
